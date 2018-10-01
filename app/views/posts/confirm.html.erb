@@ -1,0 +1,18 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">投稿しますか？</h1>
+    <%= form_tag("/posts/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <p><%= @post.content %></p>
+          <%= hidden_field_tag :content, @post.content %>
+          <%= submit_tag '投稿する', name: 'send' %>
+          <%= submit_tag '戻る', name: 'back'%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <footer class="footer">
+    <p>Twitter Clone "TweetApp"</p>
+  </footer>
+</div>
